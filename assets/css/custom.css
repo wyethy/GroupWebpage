@@ -1,0 +1,244 @@
+/* Profile picture */
+.profile-pic {
+  max-width: 200px;
+  border: 3px solid #190a7a;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Dark content box (solid black background) */
+.dark-box {
+  background: #000; /* solid black */
+  color: #141313;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dark-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.dark-box h3 {
+  margin-bottom: 10px;
+  color: #f20606;
+}
+
+.dark-box p {
+  margin: 5px 0;
+  color: #ddd;
+}
+
+/* About Section with Background */
+#about.dark-background {
+  position: relative;
+  background: url("../img/night\ 2.gif") no-repeat center center/cover;
+  color: rgb(87, 8, 198);
+  padding: 80px 0;
+}
+
+/* Overlay for readability */
+#about.dark-background::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* darkens the gif so text stands out */
+  z-index: 1;
+}
+
+/* Make sure text and content sit above overlay */
+#about .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* White text */
+#about h2, 
+#about p, 
+#about h3 {
+  color: white;
+}
+
+#about .content-box h3 {
+  color: #e90b0b; /* red */
+}
+
+/* Profile pictures spacing */
+#about .profile-pic {
+  border: 3px solid #e90b0b;
+  box-shadow: 0 0 15px rgba(160, 5, 77, 0.8); /* cyan glow */
+}
+
+
+
+/* Background same as Skills */
+.mission.skills-bg {
+  position: relative;
+  background: url("../img/falls.gif") no-repeat center center/cover;
+  background-attachment: fixed;
+  padding: 100px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+.mission.skills-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* darker overlay */
+  z-index: 0;
+}
+
+.mission.skills-bg .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mission card same as skill-card */
+.mission .skill-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission .skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+
+/* Mission card - tighter spacing */
+.mission .skill-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 12px;
+  padding: 25px 30px;   /* smaller padding */
+  margin: 0 auto;       /* center the card */
+  max-width: 800px;     /* limit width so text doesn't stretch too wide */
+  color: #fff;
+  line-height: 1.6;     /* improve readability */
+  text-align: justify;  /* optional: makes mission text look neat */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission .skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.mission .skill-card p {
+  margin-bottom: 0; /* remove extra gap under paragraph */
+}
+
+
+
+.skill-card {
+  min-height: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Skills section background like Hero */
+.skills-bg {
+  position: relative;
+  background: url("../img/falls.gif") no-repeat center center/cover; 
+  background-attachment: fixed; /* parallax effect */
+  padding: 100px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.skills-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Make text float above overlay */
+.skills-bg .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section title text */
+.skills-bg .section-title h2,
+.skills-bg .section-title p {
+  color: #fff !important;
+  text-shadow: 0px 4px 12px rgba(0,0,0,0.8);
+}
+
+/* Transparent glass cards */
+.skill-card {
+  background: rgba(0, 0, 0, 0.6); 
+  color: #fff;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.5);
+}
+
+.skill-card .card-title,
+.skill-card .card-text {
+  color: #fff;
+}
+
+
+/* Contact Section Background */
+#contact.dark-background {
+  position: relative;
+  background: url("../img/night.gif") no-repeat center center/cover; 
+  color: white;
+  padding: 60px 0;
+}
+
+/* Dark overlay */
+#contact.dark-background::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* makes text readable */
+  z-index: 1;
+}
+
+/* Content on top of overlay */
+#contact .container,
+#contact .info-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+/* White text */
+#contact h2, 
+#contact p,
+#contact h3 {
+  color: white;
+}
+
+/* Icons styled white */
+#contact i {
+  font-size: 24px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+
